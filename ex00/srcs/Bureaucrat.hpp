@@ -6,7 +6,7 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:18:00 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/07/28 19:21:32 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/07/28 23:45:07 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ public:
 	class GradeTooHighException : public std::exception {
 		public:
 			virtual const char* what() const throw();
-    };
+	};
 	class GradeTooLowException : public std::exception {
 		public:
 			virtual const char* what() const throw();

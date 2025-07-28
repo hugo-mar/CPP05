@@ -6,76 +6,76 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 19:17:58 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/07/28 19:37:09 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/07/29 00:35:23 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include <iostream>
 
 int main() {
+
+	std::cout << "=== Test: Exception GradeTooHigh ===" << std::endl;
 	try {
-		// Create a Bureaucrat with valid grade
 		Bureaucrat a("João", 2);
 		std::cout << a << std::endl;
 
-		// Increment grade (should become 1, the highest)
 		a.incrementGrade();
 		std::cout << a << std::endl;
 
-		// Attempt to increment beyond the highest grade (should throw)
 		a.incrementGrade();
 	} catch (std::exception& e) {
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 
+	std::cout << "=== Test: Exception GradeTooLow ===" << std::endl;
 	try {
-		// Create a Bureaucrat near the lowest grade
 		Bureaucrat b("Maria", 149);
 		std::cout << b << std::endl;
 
-		// Decrement grade (should become 150, the lowest)
 		b.decrementGrade();
 		std::cout << b << std::endl;
 
-		// Attempt to decrement beyond the lowest grade (should throw)
 		b.decrementGrade();
 	} catch (std::exception& e) {
 		std::cout << "Exception caught: " << e.what() << std::endl;
     }
+	std::cout << std::endl;
 
-	// Test constructor with invalid (too high) grade
+	std::cout << "=== Test: Constructor with invalid (too high) grade ===" << std::endl;
 	try {
 		Bureaucrat c("Invalid", 0);
 	} catch (std::exception& e) {
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 
-	// Test constructor with invalid (too low) grade
+	std::cout << "=== Test: Constructor with invalid (too low) grade ===" << std::endl;
 	try {
 		Bureaucrat d("Invalid", 151);
 	} catch (std::exception& e) {
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 
-	// Test copy constructor
+	std::cout << "=== Test: Copy constructor ===" << std::endl;
 	try {
-		Bureaucrat original("CopyMe", 42);
+		Bureaucrat original("RandomDude", 42);
 		Bureaucrat copy(original);
 		std::cout << "Original: " << original << std::endl;
-		std::cout << "Copy:     " << copy << std::endl;
+		std::cout << "Copy: " << copy << std::endl;
 	} catch (std::exception& e) {
 		std::cout << "Exception caught during copy construction: " << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 
-	// Test assignment operator
+	std::cout << "=== Test: Assignment operator ===" << std::endl;
 	try {
-		Bureaucrat source("Source", 100);
-		Bureaucrat target("Target", 10);
+		Bureaucrat source("Chief", 100);
+		Bureaucrat target("Intern", 10);
 		std::cout << "Before assignment:" << std::endl;
 		std::cout << "Source: " << source << std::endl;
 		std::cout << "Target: " << target << std::endl;
-
 		target = source;
 		std::cout << "After assignment:" << std::endl;
 		std::cout << "Source: " << source << std::endl;
@@ -83,6 +83,7 @@ int main() {
 	} catch (std::exception& e) {
 		std::cout << "Exception caught during assignment: " << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 
 	return 0;
 }
