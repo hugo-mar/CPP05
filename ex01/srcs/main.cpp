@@ -6,13 +6,12 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 19:17:58 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/07/29 18:32:13 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/07/29 23:44:54 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
-#include <iostream>
 
 int main() {
     std::cout << "=== Immigration Office: The Work Permit Saga ===" << std::endl;
