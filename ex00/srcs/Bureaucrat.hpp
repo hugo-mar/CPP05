@@ -6,7 +6,7 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:18:00 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/07/28 23:45:07 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:09:29 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ public:
 	};
 };
 
-// Non-member functions
+// Non-member function
 std::ostream&	operator<<(std::ostream& os, const Bureaucrat& b);
 
 #endif
