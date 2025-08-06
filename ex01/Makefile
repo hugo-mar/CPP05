@@ -6,18 +6,16 @@
 #    By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/28 23:11:37 by hugo-mar          #+#    #+#              #
-#    Updated: 2025/07/30 11:10:03 by hugo-mar         ###   ########.fr        #
+#    Updated: 2025/08/06 21:44:09 by hugo-mar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = signer
 
 CXX = c++
-
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRCS_PATH = ./srcs/
-
 SRCS = $(SRCS_PATH)Bureaucrat.cpp $(SRCS_PATH)Form.cpp $(SRCS_PATH)main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
@@ -25,10 +23,10 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
-	rm -f $(OBJS) $(ARCHIVE)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
